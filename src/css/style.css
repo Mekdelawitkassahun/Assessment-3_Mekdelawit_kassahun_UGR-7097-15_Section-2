@@ -1,0 +1,166 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 10px; /* Adds some padding for smaller screens */
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .header h1 {
+    font-size: 2em;
+    margin: 0;
+    color: #333;
+  }
+  
+  .header p {
+    font-size: 1.2em;
+    margin: 5px 0 20px;
+    color: #555;
+  }
+  
+  .calculator {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Make it adapt to smaller screens */
+    max-width: 320px; /* Ensure it doesn't get too wide */
+  }
+  
+  .display {
+    background: #222;
+    color: #fff;
+    font-size: 2em;
+    text-align: right;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 20px;
+    font-size: 1.2em;
+    background: #f1f1f1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-align: center;
+  }
+  
+  .btn:hover {
+    background: #d1d1d1;
+  }
+  
+  /* Button Colors */
+  .operator {
+    background: #ffc107;
+  }
+  
+  .operator:hover {
+    background: #e0a800;
+  }
+  
+  .clear {
+    background: #dc3545;
+    color: #fff;
+  }
+  
+  .clear:hover {
+    background: #c82333;
+  }
+  
+  .equal {
+    background: #28a745;
+    color: #fff;
+    grid-row: span 2;
+  }
+  
+  .equal:hover {
+    background: #218838;
+  }
+  
+  .number {
+    background: #e9ecef;
+  }
+  
+  .number:hover {
+    background: #ced4da;
+  }
+  
+  .dot {
+    background: #6c757d;
+    color: #fff;
+  }
+  
+  .dot:hover {
+    background: #5a6268;
+  }
+  
+  .colspan-2 {
+    grid-column: span 2;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .calculator {
+      padding: 15px;
+      max-width: 280px; /* Slightly smaller for tablets */
+    }
+  
+    .btn {
+      padding: 15px;
+      font-size: 1em;
+    }
+  
+    .display {
+      font-size: 1.5em; /* Adjust display size for smaller screens */
+      height: 50px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .calculator {
+      padding: 10px;
+      max-width: 240px; /* Narrower for mobile screens */
+    }
+  
+    .btn {
+      padding: 12px;
+      font-size: 0.9em;
+    }
+  
+    .display {
+      font-size: 1.2em; /* Smaller display for compact view */
+      height: 45px;
+    }
+  
+    .header h1 {
+      font-size: 1.5em;
+    }
+  
+    .header p {
+      font-size: 1em;
+    }
+  }
+  
